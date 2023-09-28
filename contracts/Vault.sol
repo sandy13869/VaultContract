@@ -78,9 +78,7 @@ contract Valut is ERC4626Fees{
     function beforeWithdraw(uint256 assets, uint256 shares) internal virtual {
     }
 
-    function afterDeposit(uint256 assets) internal virtual {
-        uint256 interest = assets / 10;
-        SafeERC20.safeTransferFrom(IERC20(asset()), vaultOwner, address(this), interest);
+    function afterDeposit(uint256 assets) internal virtual {        
     }
     
 }
